@@ -9,7 +9,24 @@ def get_choices():
 
 def check_win(player_choice, computer_choice):
   print(f"You chose {player_choice}, and Computer chose {computer_choice}.")
-  if (player_choice == computer_choice):
+  if player_choice == computer_choice:
     return "It's a tie!"
+  
+  elif player_choice == "rock":
+    if computer_choice == "scissors":
+      print("Rock smashes scissors. You win! :)")
+    else:
+      print("Paper covers rock. You lose. :(")
 
-check_win("rock", "rock")
+  elif player_choice == "paper":
+    if computer_choice == "rock":
+      print("Paper covers rock. You win! :)")
+    else:
+      print("Scissors cuts paper. You lose. :(")
+
+  elif player_choice == "scissors":
+    if computer_choice == "paper":
+      print("Scissors cuts paper. You win! :)")
+    else:
+      print("Rock smashes paper. You lose. :(")
+  
