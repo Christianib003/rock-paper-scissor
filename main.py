@@ -8,6 +8,8 @@ def get_choices():
   print(choices)
 
 def check_win(player_choice, computer_choice):
-  print("You chose " + player_choice + ", And Computer chose " + computer_choice)
+  print(f"You chose {player_choice}, and Computer chose {computer_choice}.")
   if (player_choice == computer_choice):
     return "It's a tie!"
+
+check_win("rock", "rock")
