@@ -7,4 +7,7 @@ def get_choices():
   choices = { "player": player_choice, "computer": computer_choice}
   print(choices)
 
-get_choices()
+def check_win(player_choice, computer_choice):
+  print("You chose " + player_choice + ", And Computer chose " + computer_choice)
+  if (player_choice == computer_choice):
+    return "It's a tie!"
