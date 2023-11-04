@@ -5,12 +5,12 @@ def get_choices():
   options = ["rock", "paper", "scissors"]
   computer_choice = random.choice(options)
   choices = { "player": player_choice, "computer": computer_choice}
-  print(choices)
+  return choices
 
 def check_win(player_choice, computer_choice):
   print(f"You chose {player_choice}, and Computer chose {computer_choice}.")
   if player_choice == computer_choice:
-    return "It's a tie!"
+    print("It's a tie!")
   
   elif player_choice == "rock":
     if computer_choice == "scissors":
@@ -29,4 +29,6 @@ def check_win(player_choice, computer_choice):
       print("Scissors cuts paper. You win! :)")
     else:
       print("Rock smashes paper. You lose. :(")
-  
+
+choices = get_choices()
+result = check_win(choices["player"], choices["computer"])
